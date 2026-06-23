@@ -3,6 +3,7 @@ Ensure you enable the Go LSP before proceeding.
 I would like you to implement the CLI in this repository. The readme has the information needed. 
 It should be written in Go. It should provide installation via scoop and brew and Github releases (thus is cross platform without large programming language or framework installations required). 
 The CLI should ask for a password and an optional salt. 
+The name of the Scoop/Brew application should match the repository name.
 
 It should allow --password but warn of the security risks of doing this (e.g. use an env var for this, wipe your terminal history entry when doing it)
 
@@ -17,7 +18,7 @@ If possible, also test the scenario where the CLI prompts for password/salt.
 
 Ensure the README is up to date, with installation instructions and with bash examples.
 
-Once complete, create a PR for your changes. Ensure the PR description is well formatted.
+Once complete, create a PR for your changes. Ensure the PR description is well formatted. Prompt the user to merge the PR.
 
 Wait 5 minutes (in 1 minute increments), then try installing using Scoop (or Brew if on Mac/Linux) and if that succeeds, try encrypting and decrypting
 the files "kr9tu4e1da4u3nifdd99g9tf5o" and "Iyxcijgc9bp3o5Y0npW6xqUvwWNcc3MA4SadB0sR6cY" (base32 and base64 filenames - password is 'Testpassword1').

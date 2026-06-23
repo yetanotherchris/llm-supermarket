@@ -24,9 +24,27 @@ See how much this cost in tokens - it won't be expensive (unless something went 
 
 Some comparisons will live here.
 
-### Grok Build 0.1
+**Grok Build 0.1**
 
-74,238 tokens
-29% used
-$1.16 spent
-~15 minutes
+- 74,238 tokens
+- 29% used
+- $1.16 spent
+- ~15 minutes
+- Need to be re-run as it may have used 3xGrok 4.3 agents
+
+**GLM-5.2**
+
+- 178,847 tokens
+- 18% used
+- $4.71 spent
+- ~40 minutes 31 seconds
+- It worked out how to merge automatically, and that the app name was incorrect.
+
+**GPT-5.1 Codex Mini**
+
+76,671 tokens
+19% used
+$0.52 spent
+
+- Didn't provide a session time.
+- Didn't merge the changes, I merged and had to re-prompt. In its defence, the prompt was missing this.
