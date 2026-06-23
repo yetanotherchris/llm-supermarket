@@ -1,7 +1,6 @@
-# rclone-encrypt
+# rclone-encrypt-{MODEL NAME}
 A small CLI tool that encrypts and decrypts using the rclone encryption defaults. 
 
-(Remove this details below for hardcore mode)
 Rclone uses a custom salt if no salt is provided, which this tool will use by default. A few similar tools:
 
 - https://github.com/rclone/rclone

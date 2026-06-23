@@ -22,7 +22,7 @@ See how much this cost in tokens - it won't be expensive (unless something went 
 
 ## Results
 
-Some comparisons will live here.
+All medium effort, % shows the context used.
 
 **Grok Build 0.1**
 
@@ -30,7 +30,7 @@ Some comparisons will live here.
 - 29% used
 - $1.16 spent
 - ~15 minutes
-- Need to be re-run as it may have used 3xGrok 4.3 agents
+- The test needs to be re-run as it may have used 3 x Grok 4.3 agents
 
 **GLM-5.2**
 
@@ -42,9 +42,23 @@ Some comparisons will live here.
 
 **GPT-5.1 Codex Mini**
 
-76,671 tokens
-19% used
-$0.52 spent
-
+- 76,671 tokens
+- 19% used
+- $0.52 spent
 - Didn't provide a session time.
 - Didn't merge the changes, I merged and had to re-prompt. In its defence, the prompt was missing this.
+
+**Gemini 3.5 Flash**
+
+- 324,349 tokens
+- 31% used
+- $6.82 spent
+- 40 minutes and 25 seconds
+
+**DeepSeek V4 Flash**
+
+- 99,914 tokens
+- 10% used
+- $0.17 spent
+- 55 minutes 21 seconds
+- It confused PR merging with Scoop installation and became stuck - I merged before it asked.
