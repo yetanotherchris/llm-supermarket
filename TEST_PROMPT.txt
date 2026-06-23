@@ -18,6 +18,9 @@ Ensure the README is up to date, following the format of rclone-web (keep the ex
 
 Once complete, create a PR for your changes. Ensure the PR description is well formatted.
 
-Wait 5 minutes, then try installing using Scoop (or Brew if on Mac/Linux) and if that succeeds, try encrypting and decrypting
+Wait 5 minutes (in 1 minute increments), then try installing using Scoop (or Brew if on Mac/Linux) and if that succeeds, try encrypting and decrypting
 the files "kr9tu4e1da4u3nifdd99g9tf5o" and "Iyxcijgc9bp3o5Y0npW6xqUvwWNcc3MA4SadB0sR6cY" (base32 and base64 filenames - password is 'Testpassword1').
 The filename should be TEST_FILE.txt and the contents should be a series of Bip39 style words. 
+
+Uninstall the application via Scoop/Brew when done, and remove the bucket from Scoop/Brew.
+Tell the user how long the session took in minutes and seconds - from the initial prompt to successfully decrypting the two files.

@@ -23,3 +23,10 @@ See how much this cost in tokens - it won't be expensive (unless something went 
 ## Results
 
 Some comparisons will live here.
+
+### Grok Build 0.1
+
+74,238 tokens
+29% used
+$1.16 spent
+~15 minutes
