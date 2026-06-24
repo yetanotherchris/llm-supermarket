@@ -27,17 +27,57 @@ The task should be under $5 unless something went badly wrong.
 ## Results
 
 All models used medium effort.  
-"% used" shows the context it used, typically of 256k.
+"% used" shows the context it used, typically a percentage of 256k.
 
 ## CLI task
 
-**Grok Build 0.1**
+**Claude 4.5 Haiku**
 
-- 74,238 tokens
-- 29% used
-- $1.16 spent
-- ~15 minutes
-- The test needs to be re-run as it may have used 3 x Grok 4.3 agents
+- 20.8k input, 51.1k output, 7.5m cache read
+- TODO
+- $1.33
+- 8 minutes 46 seconds
+- No auto mode was available, so there was a lot of "Do you want to proceed?".
+- Failed on the main task of decrypting the files.
+- Its error was "✗ Error: decryption failed: authentication tag verification failed"
+
+**Claude 4.6**
+
+- 1.5k input, 144.9k output, 7.5m cache read (also 1.1k input, 23 output Haiku)
+- TODO
+- $3.63 ($5.75 after given a hint)
+- 28 minutes 31 seconds (40 minutes 41 seconds after given a hint)
+- Failed on the main task of decrypting the files
+- Its error was "Was there a salt used? The README says 'Rclone uses a custom salt if no salt is provided' — what is that custom salt?"
+- I nudged it to look at http://github.com/yetanotherchris/rclone-encrypt and it then passed.
+- *(Need to re-run)*
+
+**Claude 4.8**
+
+- 19.0k input, 68.8k output, 7.4m cache read
+- TODO (1M context)
+- $6.84
+- 15 minutes 42 seconds
+- Successfully decrypted the two files. Needs to be run with public Github for Scoop.
+- It offered to merge the PR for me (I accepted).
+- It wrote a clear TODO list upfront, similar to the models tested via Opencode.
+- *(Need to re-run)*
+
+**DeepSeek V4 Flash**
+
+- 99,914 tokens
+- 10% used
+- $0.17 spent
+- 55 minutes 21 seconds
+- It confused PR merging with Scoop installation and became stuck - I merged before it asked.
+- *(Need to re-run)*
+
+**Gemini 3.5 Flash**
+
+- 324,349 tokens
+- 31% used
+- $6.82 spent
+- 40 minutes and 25 seconds
 
 **GLM-5.2**
 
@@ -54,20 +94,12 @@ All models used medium effort.
 - $0.52 spent
 - Didn't provide a session time.
 - Didn't merge the changes, I merged and had to re-prompt. In its defence, the prompt was missing this.
+- *(Need to re-run)*
 
-**Gemini 3.5 Flash**
+**Grok Build 0.1**
 
-- 324,349 tokens
-- 31% used
-- $6.82 spent
-- 40 minutes and 25 seconds
-
-**DeepSeek V4 Flash**
-
-- 99,914 tokens
-- 10% used
-- $0.17 spent
-- 55 minutes 21 seconds
-- It confused PR merging with Scoop installation and became stuck - I merged before it asked.
-
-**Claude 4.5**
+- 74,238 tokens
+- 29% used
+- $1.16 spent
+- ~15 minutes
+- The test needs to be re-run as it may have used 3 x Grok 4.3 agents
