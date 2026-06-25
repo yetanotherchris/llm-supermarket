@@ -33,27 +33,30 @@ All models used medium effort.
 
 **Claude 4.5 Haiku**
 
+*go:*
 - 20.8k input, 51.1k output, 7.5m cache read
 - TODO
 - $1.33
 - 8 minutes 46 seconds
-- No auto mode was available, so there was a lot of "Do you want to proceed?".
-- Failed on the main task of decrypting the files.
+- ❌ Didn't finish: Failed on the main task of decrypting the files.
 - Its error was "✗ Error: decryption failed: authentication tag verification failed"
+- No auto mode was available, so there was a lot of "Do you want to proceed?".
 
 **Claude 4.6**
 
+*go:*
 - 1.5k input, 144.9k output, 7.5m cache read (also 1.1k input, 23 output Haiku)
 - TODO
 - $3.63 ($5.75 after given a hint)
 - 28 minutes 31 seconds (40 minutes 41 seconds after given a hint)
-- Failed on the main task of decrypting the files
+- ❌ Failed on the main task of decrypting the files
 - Its error was "Was there a salt used? The README says 'Rclone uses a custom salt if no salt is provided' — what is that custom salt?"
 - I nudged it to look at http://github.com/yetanotherchris/rclone-encrypt and it then passed.
 - *(Need to re-run using Github.com)*
 
 **Claude 4.8**
 
+*go:*
 - 19.0k input, 68.8k output, 7.4m cache read
 - TODO (1M context)
 - $6.84
@@ -65,6 +68,7 @@ All models used medium effort.
 
 **DeepSeek V4 Flash**
 
+*go:*
 - 99,914 tokens
 - 10% used
 - $0.17 spent
@@ -78,8 +82,16 @@ All models used medium effort.
 - $0.86 spent
 - ~45 minutes
 
+*python*
+- 102,594 tokens
+- 10% used
+- $0.05 spent
+- ~19 minutes
+- Had to ask it to verify it had installed via pip before completing.
+
 **Gemini 3.5 Flash**
 
+*go:*
 - 324,349 tokens
 - 31% used
 - $6.82 spent
@@ -87,6 +99,7 @@ All models used medium effort.
 
 **GLM-5.2**
 
+*go:*
 - 178,847 tokens
 - 18% used
 - $4.71 spent
@@ -95,6 +108,7 @@ All models used medium effort.
 
 **GPT-5.1 Codex Mini**
 
+*go:*
 - 76,671 tokens
 - 19% used
 - $0.52 spent
@@ -103,21 +117,30 @@ All models used medium effort.
 - *(Need to re-run)*
 
 *csharp:*
-- Attempt  1: bun crashed
-- Attempts 2: Froze after "Loaded modern .NET solution structure and C# coding standards skills."
-- Attempts 3: said it couldn't load the LSP and gave up.
-- Attempts 4-8: Bun crashed
+- ~500,000
+- Not available (desktop mode)
+- $0.30 spent
+- Didn't provide a session time (around 1 hour).
+- ❌ Didn't finish: stopped before completion "If you’d like me to move toward that goal now, I can keep building out the CLI/key derivation"
+- Didn't create a .gitignore
 
 **Grok Build 0.1**
 
+*go:*
 - 74,238 tokens
 - 29% used
 - $1.16 spent
 - ~15 minutes
-- The test needs to be re-run as it may have used 3 x Grok 4.3 agents
+- This test needs to be re-run as it may have used 3 x Grok 4.3 agents
 
 *csharp:*
 - 196,769 tokens
 - 77% used
 - $5.14 spent
 - 47 minutes 40 seconds
+
+*python*
+- ~230,000 tokens
+- Not available (desktop mode)
+- $1.68
+- ~20 minutes
