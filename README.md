@@ -31,150 +31,24 @@ All models used medium effort.
 
 ## CLI task
 
-### Claude 4.5 Haiku
+Tests results 24/25th June 2026
 
-*go:*
-- 20.8k input, 51.1k output, 7.5m cache read
-- TODO
-- $1.33
-- 8 minutes 46 seconds
-- ❌ Didn't finish: Failed on the main task of decrypting the files.
-- Its error was "✗ Error: decryption failed: authentication tag verification failed"
-- No auto mode was available, so there was a lot of "Do you want to proceed?".
-
-### Claude 4.6
-
-*go:*
-- 1.5k input, 144.9k output, 7.5m cache read (also 1.1k input, 23 output Haiku)
-- TODO
-- $3.63 ($5.75 after given a hint)
-- 28 minutes 31 seconds (40 minutes 41 seconds after given a hint)
-- ❌ Failed on the main task of decrypting the files
-- Its error was "Was there a salt used? The README says 'Rclone uses a custom salt if no salt is provided' — what is that custom salt?"
-- I nudged it to look at http://github.com/yetanotherchris/rclone-encrypt and it then passed.
-- *(Need to re-run using Github.com)*
-
-### Claude 4.8
-
-*go:*
-- 19.0k input, 68.8k output, 7.4m cache read
-- TODO (1M context)
-- $6.84
-- 15 minutes 42 seconds
-- Successfully decrypted the two files. Needs to be run with public Github for Scoop.
-- It offered to merge the PR for me (I accepted).
-- It wrote a clear TODO list upfront, similar to the models tested via Opencode.
-- *(Need to re-run Github.com)*
-
-### DeepSeek V4 Flash
-
-*go:*
-- 99,914 tokens
-- 10% used
-- $0.17 spent
-- 55 minutes 21 seconds
-- It confused PR merging with Scoop installation and became stuck - I merged before it asked.
-- *(Need to re-run)*
-
-*csharp:*
-- 235,746 tokens
-- 24% used
-- $0.86 spent
-- ~45 minutes
-
-*python*
-- 102,594 tokens
-- 10% used
-- $0.05 spent
-- ~19 minutes
-- Had to ask it to verify it had installed via pip before completing.
-
-### Gemini 3.5 Flash
-
-*go:*
-- 324,349 tokens
-- 31% used
-- $6.82 spent
-- 40 minutes and 25 seconds
-
-### GLM-5.2
-
-*go:*
-- 178,847 tokens
-- 18% used
-- $4.71 spent
-- ~40 minutes 31 seconds
-- It worked out how to merge automatically, and that the app name was incorrect.
-
-### GPT-5.1 Codex Mini
-
-*go:*
-- 76,671 tokens
-- 19% used
-- $0.52 spent
-- Didn't provide a session time.
-- Didn't merge the changes, I merged and had to re-prompt. In its defence, the prompt was missing this.
-
-*csharp:*
-- ~500,000
-- Not available (desktop mode)
-- $0.30 spent
-- Didn't provide a session time (around 1 hour).
-- ❌ Didn't finish: stopped before completion "If you’d like me to move toward that goal now, I can keep building out the CLI/key derivation"
-- Didn't create a .gitignore
-
-### GPT-5.3 Codex
-
-*csharp:*
-- ~153,000
-- 39%
-- $3.57 spent
-- Didn't provide a session time (around 50 minutes).
-- ❌ Didn't finish: I had to prompt it 3 times. It then succeeded with Scoop
-
-### Grok Build 0.1
-
-*go:*
-- 74,238 tokens
-- 29% used
-- $1.16 spent
-- ~15 minutes
-
-*csharp:*
-- 196,769 tokens
-- 77% used
-- $5.14 spent
-- 47 minutes 40 seconds
-
-*python*
-- ~142,577 tokens
-- 56% used
-- $1.94
-- ~20 minutes
-
-### Kimi 2.7 code
-
-*go:*
-- 132,799 tokens
-- 51% usage
-- $2.18
-- ~42 minutes
-- Prompted for the PR to be merged, with a link
-- Ran two code reviews without any prompting.
-
-*csharp:*
-- 27,871 tokens
-- 11% usage
-- $3.90
-- ~1 hour
-- Prompted for the PR to be merged, with a link
-- One of the builds failed on Github (Darwin build)
-- It fixed it upon prompting. Politely asked to create a tag on the repo.
-
-*python:*
-- 73,671 tokens
-- 28% usage
-- $0.91
-- ~40 minutes
-- Didn't need a PR but created one per the instructions.
-- Went slowly for a while.
+| **Model**              | Language | Tokens               | Pass/Fail  | Cost  | Time taken                       | Notes                                                                                                                                       |
+|------------------------|----------|----------------------|------------|-------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| **Claude 4.5 Haiku**   | go       | 71.9k                | ❌         | $1.33 | 8 minutes 46 seconds             | ❌ Didn't finish: failed to decrypt files with "authentication tag verification failed". No auto mode; lots of "Do you want to proceed?".  |
+| **4.6**                | go       | 146.4k               | ❌         | $5.75 | 40 minutes 41 seconds after hint | ❌ Failed to decrypt files; asked about rclone custom salt. Passed after nudge to look at example repo. *(Need to re-run using Github.com)*|
+| **4.8**                | go       | 87.8k                | ✅         | $6.84 | 15 minutes 42 seconds            | Successfully decrypted both files. Needs public GitHub for Scoop. Offered to merge PR. Wrote clear TODO list. *(Need to re-run Github.com)* |
+| **DeepSeek V4 Flash**  | go       | 99,914 (10% used)    | ✅         | $0.17 | 55 minutes 21 seconds            | Confused PR merging with Scoop installation and became stuck. *(Need to re-run)*                                                            |
+| **DeepSeek V4 Flash**  | csharp   | 235,746 (24% used)   | ✅         | $0.86 | ~45 minutes                      |                                                                                                                                             |
+| **DeepSeek V4 Flash**  | python   | 102,594 (10% used)   | ✅         | $0.05 | ~19 minutes                      | Had to ask it to verify it had installed via pip before completing.                                                                         |
+| **Gemini 3.5 Flash**   | go       | 324,349 (31% used)   | ✅         | $6.82 | 40 minutes 25 seconds            |                                                                                                                                             |
+| **GLM-5.2**            | go       | 178,847 (18% used)   | ✅         | $4.71 | ~40 minutes 31 seconds           | Worked out how to merge automatically and that the app name was incorrect.                                                                  |
+| **GPT-5.1 Codex Mini** | go       | 76,671 (19% used)    | ✅         | $0.52 | Not provided                     | Didn't merge changes; I merged and had to re-prompt. Prompt was missing this.                                                               |
+| **GPT-5.1 Codex Mini** | csharp   | 154,561 (39% used)   | ❌         | $4.10 | Not provided (~1 hour)           | ❌ Didn't finish: stopped before completion. Didn't create a `.gitignore`.                                                                  |
+| **GPT-5.3 Codex**      | csharp   | 153,000 (39%)        | ❌         | $3.57 | Not provided (~50 minutes)       | ❌ Didn't finish: had to prompt 3 times, then succeeded with Scoop.                                                                         |
+| **Grok Build 0.1**     | go       | 74,238 (29% used)    | ✅         | $1.16 | ~15 minutes                      |                                                                                                                                             |
+| **Grok Build 0.1**     | csharp   | 196,769 (77% used)   | ✅         | $5.14 | 47 minutes 40 seconds            |                                                                                                                                             |
+| **Grok Build 0.1**     | python   | 142,577 (56% used)   | ✅         | $1.94 | ~20 minutes                      |                                                                                                                                             |
+| **Kimi 2.7 code**      | go       | 132,799 (51% usage)  | ✅         | $2.18 | ~42 minutes                      | Prompted for PR to be merged. Ran two code reviews without prompting.                                                                       |
+| **Kimi 2.7 code**      | csharp   | 27,871 (11% usage)   | ✅         | $3.90 | ~1 hour                          | Prompted for PR to be merged. Darwin build failed on GitHub; fixed upon prompting. Asked to create a tag.                                   |
+| **Kimi 2.7 code**      | python   | 73,671 (28% usage)   | ✅         | $0.91 | ~40 minutes                      | Didn't need a PR but created one per instructions. Went slowly for a while.                                                                 |
