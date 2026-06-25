@@ -31,7 +31,7 @@ All models used medium effort.
 
 ## CLI task
 
-**Claude 4.5 Haiku**
+### Claude 4.5 Haiku
 
 *go:*
 - 20.8k input, 51.1k output, 7.5m cache read
@@ -42,7 +42,7 @@ All models used medium effort.
 - Its error was "✗ Error: decryption failed: authentication tag verification failed"
 - No auto mode was available, so there was a lot of "Do you want to proceed?".
 
-**Claude 4.6**
+### Claude 4.6
 
 *go:*
 - 1.5k input, 144.9k output, 7.5m cache read (also 1.1k input, 23 output Haiku)
@@ -54,7 +54,7 @@ All models used medium effort.
 - I nudged it to look at http://github.com/yetanotherchris/rclone-encrypt and it then passed.
 - *(Need to re-run using Github.com)*
 
-**Claude 4.8**
+### Claude 4.8
 
 *go:*
 - 19.0k input, 68.8k output, 7.4m cache read
@@ -66,7 +66,7 @@ All models used medium effort.
 - It wrote a clear TODO list upfront, similar to the models tested via Opencode.
 - *(Need to re-run Github.com)*
 
-**DeepSeek V4 Flash**
+### DeepSeek V4 Flash
 
 *go:*
 - 99,914 tokens
@@ -89,7 +89,7 @@ All models used medium effort.
 - ~19 minutes
 - Had to ask it to verify it had installed via pip before completing.
 
-**Gemini 3.5 Flash**
+### Gemini 3.5 Flash
 
 *go:*
 - 324,349 tokens
@@ -97,7 +97,7 @@ All models used medium effort.
 - $6.82 spent
 - 40 minutes and 25 seconds
 
-**GLM-5.2**
+### GLM-5.2
 
 *go:*
 - 178,847 tokens
@@ -106,7 +106,7 @@ All models used medium effort.
 - ~40 minutes 31 seconds
 - It worked out how to merge automatically, and that the app name was incorrect.
 
-**GPT-5.1 Codex Mini**
+### GPT-5.1 Codex Mini
 
 *go:*
 - 76,671 tokens
@@ -124,7 +124,7 @@ All models used medium effort.
 - ❌ Didn't finish: stopped before completion "If you’d like me to move toward that goal now, I can keep building out the CLI/key derivation"
 - Didn't create a .gitignore
 
-**Grok Build 0.1**
+### Grok Build 0.1
 
 *go:*
 - 74,238 tokens
