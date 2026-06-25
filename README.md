@@ -50,7 +50,7 @@ All models used medium effort.
 - Failed on the main task of decrypting the files
 - Its error was "Was there a salt used? The README says 'Rclone uses a custom salt if no salt is provided' — what is that custom salt?"
 - I nudged it to look at http://github.com/yetanotherchris/rclone-encrypt and it then passed.
-- *(Need to re-run)*
+- *(Need to re-run using Github.com)*
 
 **Claude 4.8**
 
@@ -61,7 +61,7 @@ All models used medium effort.
 - Successfully decrypted the two files. Needs to be run with public Github for Scoop.
 - It offered to merge the PR for me (I accepted).
 - It wrote a clear TODO list upfront, similar to the models tested via Opencode.
-- *(Need to re-run)*
+- *(Need to re-run Github.com)*
 
 **DeepSeek V4 Flash**
 
@@ -71,6 +71,12 @@ All models used medium effort.
 - 55 minutes 21 seconds
 - It confused PR merging with Scoop installation and became stuck - I merged before it asked.
 - *(Need to re-run)*
+
+*csharp:*
+- 235,746 tokens
+- 24% used
+- $0.86 spent
+- ~45 minutes
 
 **Gemini 3.5 Flash**
 
@@ -96,6 +102,12 @@ All models used medium effort.
 - Didn't merge the changes, I merged and had to re-prompt. In its defence, the prompt was missing this.
 - *(Need to re-run)*
 
+*csharp:*
+- Attempt  1: bun crashed
+- Attempts 2: Froze after "Loaded modern .NET solution structure and C# coding standards skills."
+- Attempts 3: said it couldn't load the LSP and gave up.
+- Attempts 4-8: Bun crashed
+
 **Grok Build 0.1**
 
 - 74,238 tokens
@@ -103,3 +115,9 @@ All models used medium effort.
 - $1.16 spent
 - ~15 minutes
 - The test needs to be re-run as it may have used 3 x Grok 4.3 agents
+
+*csharp:*
+- 196,769 tokens
+- 77% used
+- $5.14 spent
+- 47 minutes 40 seconds
