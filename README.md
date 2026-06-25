@@ -5,14 +5,17 @@ This is a set of basic coding tests used to compare LLM coding models and find o
 1. A model can complete the task.
 2. How the model costs to complete the task.
 
-The task are not overly complicated have examples already on GitHub that models can borrow from. The task should be something models can complete, but at the same time isn't a basic kata. Intended as a rough estimation of whether a model can autonomously complete the task, and how much it costs.
+The task are not overly complicated and already have examples on GitHub that models can borrow from (this is removed in the 'hard' mode tests). 
+The task is intended to be something models can complete, but at the same time isn't a basic kata. The intention is to see how far a model can autonomously 
+complete the task, and how much it costs.
 
 If models and the tooling gradually improve the price should drop, number of tokens used should drop, and completeness should improve.
 
 ## Tasks
 
 ### CLI
-This is a basic task to create a CLI tool (default is using GoLang) that encrypts and decrypts files, which adheres to the rclone encrypt format.
+This is a basic task to create a CLI tool (default is using GoLang) that encrypts and decrypts files, which adheres to the rclone encrypt format. 
+It has a Go-bias to it, as the rclone tool is written in Go.
 
 Instructions:
 1. Create a new Github repository called "rclone-encrypt" or similar.
@@ -31,7 +34,7 @@ All models used medium effort.
 
 ## CLI task
 
-Tests results 24/25th June 2026
+Tests results are from 24/25th June 2026. The code repositorys can be found in [The Github "llm-supermarket" organisation](https://github.com/orgs/llm-supermarket/repositories/)
 
 | **Model**              | Language | Tokens               | Pass/Fail  | Cost  | Time taken              | Notes                                                                                                                                       |
 |------------------------|----------|----------------------|------------|-------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
