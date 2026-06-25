@@ -114,7 +114,6 @@ All models used medium effort.
 - $0.52 spent
 - Didn't provide a session time.
 - Didn't merge the changes, I merged and had to re-prompt. In its defence, the prompt was missing this.
-- *(Need to re-run)*
 
 *csharp:*
 - ~500,000
@@ -124,6 +123,15 @@ All models used medium effort.
 - ❌ Didn't finish: stopped before completion "If you’d like me to move toward that goal now, I can keep building out the CLI/key derivation"
 - Didn't create a .gitignore
 
+### GPT-5.3 Codex
+
+*csharp:*
+- ~153,000
+- 39%
+- $3.57 spent
+- Didn't provide a session time (around 50 minutes).
+- ❌ Didn't finish: I had to prompt it 3 times. It then succeeded with Scoop
+
 ### Grok Build 0.1
 
 *go:*
@@ -131,7 +139,6 @@ All models used medium effort.
 - 29% used
 - $1.16 spent
 - ~15 minutes
-- This test needs to be re-run as it may have used 3 x Grok 4.3 agents
 
 *csharp:*
 - 196,769 tokens
@@ -140,7 +147,34 @@ All models used medium effort.
 - 47 minutes 40 seconds
 
 *python*
-- ~230,000 tokens
-- Not available (desktop mode)
-- $1.68
+- ~142,577 tokens
+- 56% used
+- $1.94
 - ~20 minutes
+
+### Kimi 2.7 code
+
+*go:*
+- 132,799 tokens
+- 51% usage
+- $2.18
+- ~42 minutes
+- Prompted for the PR to be merged, with a link
+- Ran two code reviews without any prompting.
+
+*csharp:*
+- 27,871 tokens
+- 11% usage
+- $3.90
+- ~1 hour
+- Prompted for the PR to be merged, with a link
+- One of the builds failed on Github (Darwin build)
+- It fixed it upon prompting. Politely asked to create a tag on the repo.
+
+*python:*
+- 73,671 tokens
+- 28% usage
+- $0.91
+- ~40 minutes
+- Didn't need a PR but created one per the instructions.
+- Went slowly for a while.
