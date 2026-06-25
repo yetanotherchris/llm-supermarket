@@ -34,7 +34,7 @@ All models used medium effort.
 
 ## CLI task
 
-Tests results are from 24/25th June 2026. The code repositorys can be found in [The Github "llm-supermarket" organisation](https://github.com/orgs/llm-supermarket/repositories/)
+Tests results are from 24/25th June 2026. The code repositories can be found in [The Github "llm-supermarket" organisation](https://github.com/orgs/llm-supermarket/repositories/)
 
 | **Model**              | Language | Tokens               | Pass/Fail  | Cost  | Time taken              | Notes                                                                                                                                       |
 |------------------------|----------|----------------------|------------|-------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
