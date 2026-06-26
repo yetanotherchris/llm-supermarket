@@ -1,6 +1,6 @@
 # llm-supermarket
 
-<img src="./mw28k.jpg" width="50%" height="50%">
+<img src="./mw28k.jpg" width="25%" height="25%">
 
 This is a set of basic coding tests used to compare LLM coding models and find out if:
 
@@ -13,9 +13,9 @@ complete the task, and how much it costs.
 
 If models and the tooling gradually improve the price should drop, number of tokens used should drop, and completeness should improve.
 
-## Tasks
+## Coding tests
 
-### CLI
+### 1. CLI
 This is a basic task to create a CLI tool (default is using GoLang) that encrypts and decrypts files, which adheres to the rclone encrypt format. 
 It has a Go-bias to it, as the rclone tool is written in Go.
 
