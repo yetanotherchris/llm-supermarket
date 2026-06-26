@@ -1,6 +1,6 @@
 # llm-supermarket
 
-<img src="./mw28k.jpg" width="50%" height="50%">
+<img src="./mw28k.jpg" width="25%" height="25%">
 
 This is a set of basic coding tests used to compare LLM coding models and find out if:
 
