@@ -27,3 +27,5 @@ The filename should be TEST_FILE.txt and the contents should be a series of Bip3
 
 Uninstall the application via Scoop/Brew when done, and remove the bucket from Scoop/Brew.
 Tell the user how long the session took in minutes and seconds - from the initial prompt to successfully decrypting the two files.
+
+Make sure you continue until the task is complete - which is the PR creation, and then waiting up to 5 minutes and downloading the application, then testing it.
