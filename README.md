@@ -1,5 +1,7 @@
 # llm-supermarket
 
+<img src="./mw28k.jpg" width="50%" height="50%">
+
 This is a set of basic coding tests used to compare LLM coding models and find out if:
 
 1. A model can complete the task.
@@ -55,3 +57,5 @@ Tests results are from 24/25th June 2026. The code repositories can be found in 
 | **Kimi 2.7 code**      | go       | 132,799 (51% usage)  | ✅         | $2.18 | ~42 minutes            | Prompted for PR to be merged. Ran two code reviews without prompting.                                                                       |
 | **Kimi 2.7 code**      | csharp   | 27,871 (11% usage)   | ✅         | $3.90 | ~1 hour                | Prompted for PR to be merged. Darwin build failed on GitHub; fixed upon prompting. Asked to create a tag.                                   |
 | **Kimi 2.7 code**      | python   | 73,671 (28% usage)   | ✅         | $0.91 | ~40 minutes            | Didn't need a PR but created one per instructions. Went slowly for a while.                                                                 |
+| **MiniMax M2.7**       | go       | 118,479 (58% usage)  | ❌         | $0.99 | 28 minutes             | Failed - didn't infer the default rclone salt (I changed the prompt after this). It did prompt with 3 options for me to merge the PR        |
+| **Qwen 3.6 plus**      | go       | 123,123 (50% usage)  | ✅         | $0.51 | 30 minutes             | It auto merged the PR, didn't prompt for it to be merged.                                                                                   |
