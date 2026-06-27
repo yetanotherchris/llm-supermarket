@@ -1,0 +1,4 @@
+Can you update the README so the table in "CLI task" section has hyperlinks in the first column to the repository that test represents. 
+Each test will have an equivalent repository in https://github.com/orgs/llm-supermarket/repositories. 
+Some of the repository names start with "rclone-encrypt-test" rather than "cli-" (this section you're changing in the README are all "cli" testing tasks).
+Ensure the markdown table is formatted so it's humanly readable, e.g. equal width for most columns.
