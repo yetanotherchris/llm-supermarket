@@ -29,7 +29,7 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	cfg.Org = prompt(scanner, "GitHub organisation", "llm-supermarket")
-	cfg.TestName = prompt(scanner, "Test name (e.g. cli, markdown-readme)", "")
+	cfg.TestName = prompt(scanner, "Test name (e.g. cli, markdown-table-formatting)", "")
 	cfg.Model = prompt(scanner, "Model", "")
 	cfg.Language = prompt(scanner, "Programming language", "")
 	cfg.Difficulty = prompt(scanner, "Difficulty", "")

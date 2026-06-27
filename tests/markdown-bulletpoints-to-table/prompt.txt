@@ -1,0 +1,2 @@
+in the readme.md, can you change the "CLI task" section so it's a markdown table with the columns: Model, Language, Tokens, Cost, Time taken, Notes and use the bullet points for each model/language to create it. 
+Make the markdown table well formatted so it is humanly readable, equal column widths except the last column.
