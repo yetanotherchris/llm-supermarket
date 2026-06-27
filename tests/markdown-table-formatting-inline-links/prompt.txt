@@ -1,3 +1,3 @@
 Can you fix the formatting in the markdown table in the README.md in the repository root, so it's humanly readable and the column widths are equal, with the exception of the last column where content is longer.
 
-In the first column, replace the links with inline links (e.g. [1],[2])
+In the first column, replace the links with inline links (e.g. [1],[2] for example **[Kimi 2.7 code][1]**
