@@ -30,22 +30,22 @@ All models used medium effort unless stated.  "% used" shows the context it used
 
 Tests results are from June 2026 using OpenCode and Claude Code. 
 
-| Model                            | Language  | Tokens              | Pass/Fail | Cost  | Time taken           | Notes                                                                                                      |
-|----------------------------------|-----------|---------------------|-----------|-------|--------------------- |------------------------------------------------------------------------------------------------------------|
+| Model                            | Language  | Tokens              | Pass/Fail | Cost    | Time taken           | Notes                                                                                                      |
+|----------------------------------|-----------|---------------------|-----------|---------|--------------------- |------------------------------------------------------------------------------------------------------------|
 | [**Claude 4.5 Haiku high**][1]   | go        | 71.9k               | ❌        | $6.19  | ~18 mins            | No auto mode;Didn't create the PR: "You're right - I apologize! I committed directly to main instead of..." (cost 10c to correct, linked wrong PR url after that); "5 commits with complete implementation, security hardening, and production-ready code.": 2 tests failed in the PR;merge conflict then it pushed to main randomnly; |
-| [**Claude 4.6 Sonnet**][2]       | go        | 146.4k              | ✅        | $3.49  | 34 mins 16 secs     | Failed to decrypt files; asked about rclone custom salt. Passed after nudge to look at example repo. *(Need to re-run using Github.com)* |
-| **Claude 4.8 Opus**              | go        | 87.8k               | ✅        | $6.84  | 15 mins 42 secs     | Successfully decrypted both files. Needs public GitHub for Scoop. Offered to merge PR. Wrote clear TODO list. *(Need to re-run Github.com)* |
-| [**Claude 4.5 Haiku high**][3]   | csharp    | ~82.3k (95%)        | ❌        | $6.19  | 27 mins 40 secs     | Didn't create a PR, had to be prompted: "You're absolutely right. Let me create a proper PR workflow. I'll reset main, create a feature branch, redo the work, and create a proper PR.";Merge issues with the PR it created;PR fixed, merged, then it discovered it had used the wrong algorithm.;It failed with the test files, but confidently. declared "The CLI works perfectly with its own format, as proven by the successful test." |
-| [**Claude 4.6 Sonnet high**][4]  | csharp    | ~189k (33k Haiku)   | ✅        | $6.63  | 38m 40s             |  |
+| [**Claude 4.6 Sonnet**][2]       | go        | 146.4k              | ✅        | $3.49  | 34 mins 16 secs     | Failed to decrypt files; asked about rclone custom salt. Passed after nudge to look at example repo.  |
+| [**Claude 4.8 Opus**][23]        | go        | 107.1k              | ✅        | $6.20  | 17 mins 43 secs     | Followed all instructions exactly. Produced a neat table of decrypted filename and its contents when finishing. |
+| [**Claude 4.5 Haiku high**][3]   | csharp    | 82.3k (95%)         | ❌        | $6.19  | 27 mins 40 secs     | Didn't create a PR, had to be prompted: "You're absolutely right. Let me create a proper PR workflow. I'll reset main, create a feature branch, redo the work, and create a proper PR.";Merge issues with the PR it created;PR fixed, merged, then it discovered it had used the wrong algorithm.;It failed with the test files, but confidently. declared "The CLI works perfectly with its own format, as proven by the successful test." |
+| [**Claude 4.6 Sonnet high**][4]  | csharp    | 189k (33k Haiku)    | ✅        | $6.63  | 38m 40s             |  |
 | [**Claude 4.8 Opus high**][5]    | csharp    | 393k (20k Haiku )   | ✅        | $20.05 | 1 hour 56 mins      |  |
-| [**DeepSeek V4 Flash**][6]       | go        | 99,914 (10% used)   | ✅        | $0.17  | 55 mins 21 secs     | Confused PR merging with Scoop installation and became stuck. *(Need to re-run)* |
+| [**DeepSeek V4 Flash**][6]       | go        | 99,914 (10% used)   | ✅        | $0.17  | 55 mins 21 secs     | Confused PR merging with Scoop installation and became stuck. *(TODO re-run)* |
 | [**DeepSeek V4 Flash**][7]       | csharp    | 235,746 (24% used)  | ✅        | $0.86  | ~45 mins            |  |
 | [**DeepSeek V4 Flash**][8]       | python    | 102,594 (10% used)  | ✅        | $0.05  | ~19 mins            | Had to ask it to verify it had installed via pip before completing. |
 | [**Gemini 3.5 Flash**][9]        | go        | 324,349 (31% used)  | ✅        | $6.82  | 40 mins 25 secs     |  |
 | [**GLM-5.2**][10]                | go        | 178,847 (18% used)  | ✅        | $4.71  | ~40 mins 31 secs    | Worked out how to merge automatically and that the app name was incorrect. |
 | [**GPT-5.1 Codex Mini**][11]     | go        | 76,671 (19% used)   | ✅        | $0.52  | Not provided        | Didn't merge changes; I merged and had to re-prompt. Prompt was missing this. |
-| [**GPT-5.1 Codex Mini**][12]     | csharp    | 154,561 (39% used)  | ❌        | $4.10  | ~1 hour             | Didn't finish: stopped before completion. Didn't create a .gitignore. |
-| [**GPT-5.3 Codex**][13]          | csharp    | 153,000 (39%)       | ❌        | $3.57  | ~50 mins            | Didn't finish: had to prompt 3 times, then succeeded with Scoop. |
+| [**GPT-5.1 Codex Mini**][12]     | csharp    | 154,561 (39% used)  | ❌        | $4.10  | ~1 hour             | Didn't finish: stopped before completion. Didn't create a .gitignore. Scanned non-repo directories.|
+| [**GPT-5.3 Codex**][13]          | csharp    | 153,000 (39%)       | ❌        | $3.57  | ~50 mins            | Didn't finish: had to prompt 3 times, then succeeded with Scoop. Scanned non-repo directories.|
 | [**Grok Build 0.1**][14]         | go        | 74,238 (29% used)   | ✅        | $1.16  | ~15 mins            |  |
 | [**Grok Build 0.1**][15]         | csharp    | 196,769 (77% used)  | ✅        | $5.14  | 47 mins 40 secs     |  |
 | [**Grok Build 0.1**][16]         | python    | 142,577 (56% used)  | ✅        | $1.94  | ~20 mins            |  |
@@ -113,3 +113,4 @@ Messed the links up
 [20]: https://github.com/llm-supermarket/cli-minimaxm27-go
 [21]: https://github.com/llm-supermarket/cli-qwen36plus-go
 [22]: https://github.com/llm-supermarket/cli-qwen36plus-csharp
+[23]: https://github.com/llm-supermarket/cli-claude48-opus-go
