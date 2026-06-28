@@ -36,25 +36,26 @@ Tests results are from June 2026 using OpenCode and Claude Code.
 | [**Claude 4.8 Opus**][3]         | go        | 107.1k              | ✅        | $6.20  | 17 mins 43 secs      | Followed all instructions exactly. Produced a neat table of decrypted filename and its contents when finishing. |
 | [**Claude 4.5 Haiku high**][4]   | csharp    | 82.3k (95%)         | ❌        | $6.19  | 27 mins 40 secs      | Didn't create a PR, had to be prompted: "You're absolutely right. Let me create a proper PR workflow. I'll reset main, create a feature branch, redo the work, and create a proper PR.";Merge issues with the PR it created;PR fixed, merged, then it discovered it had used the wrong algorithm.;It failed with the test files, but confidently. declared "The CLI works perfectly with its own format, as proven by the successful test." |
 | [**Claude 4.6 Sonnet high**][5]  | csharp    | 189k (33k Haiku)    | ✅        | $6.63  | 38m 40s              |  |
-| [**Claude 4.6 Sonnet**][66]      | csharp    | 126.5k (12k Haiku)  | ✅        | $5.97  | 32m 38s              |  |
-| [**Claude 4.8 Opus high**][6]    | csharp    | 393k (20k Haiku )   | ✅        | $20.05 | 1 hour 56 mins       |  |
-| [**DeepSeek V4 Flash**][7]       | go        | 118,806 (12% used)  | ✅        | $0.08  | 17 mins 3 secs       | Created the PR, it auto-merged the PR, installed via Scoop and unencrypted successfully. |
-| [**DeepSeek V4 Flash**][8]       | csharp    | 235,746 (24% used)  | ✅        | $0.86  | ~45 mins             |  |
-| [**DeepSeek V4 Flash**][9]       | python    | 102,594 (10% used)  | ✅        | $0.05  | ~19 mins             | Had to ask it to verify it had installed via pip before completing. |
-| [**Gemini 3.5 Flash**][10]       | go        | 324,349 (31% used)  | ✅        | $6.82  | 40 mins 25 secs      |  |
-| [**GLM-5.2**][11]                | go        | 178,847 (18% used)  | ✅        | $4.71  | ~40 mins 31 secs     | Worked out how to merge automatically and that the app name was incorrect. |
-| [**GPT-5.1 Codex Mini**][12]     | go        | 76,671 (19% used)   | ✅        | $0.52  | Not provided         | Didn't merge changes; I merged and had to re-prompt. Prompt was missing this. |
-| [**GPT-5.1 Codex Mini**][13]     | csharp    | 154,561 (39% used)  | ❌        | $4.10  | ~1 hour              | Didn't finish: stopped before completion. Didn't create a .gitignore. Scanned non-repo directories.|
-| [**GPT-5.3 Codex**][14]          | csharp    | 153,000 (39%)       | ❌        | $3.57  | ~50 mins             | Didn't finish: had to prompt 3 times, then succeeded with Scoop. Scanned non-repo directories.|
-| [**Grok Build 0.1**][15]         | go        | 74,238 (29% used)   | ✅        | $1.16  | ~15 mins             |  |
-| [**Grok Build 0.1**][16]         | csharp    | 196,769 (77% used)  | ✅        | $5.14  | 47 mins 40 secs      |  |
-| [**Grok Build 0.1**][17]         | python    | 142,577 (56% used)  | ✅        | $1.94  | ~20 mins             |  |
-| [**Kimi 2.7 code**][18]          | go        | 132,799 (51% usage) | ✅        | $2.18  | ~42 mins             | Prompted for PR to be merged. Ran two code reviews without prompting. |
-| [**Kimi 2.7 code**][19]          | csharp    | 27,871 (11% usage)  | ✅        | $3.90  | ~1 hour              | Prompted for PR to be merged. Darwin build failed on GitHub; fixed upon prompting. Asked to create a tag. |
-| [**Kimi 2.7 code**][20]          | python    | 73,671 (28% usage)  | ✅        | $0.91  | ~40 mins             | Didn't need a PR but created one per instructions. Went slowly for a while. |
-| [**MiniMax M2.7**][21]           | go        | 118,479 (58% usage) | ❌        | $0.99  | 28 mins              | Failed - didn't infer the default rclone salt (I changed the prompt after this). It did prompt with 3 options for me to merge the PR |
-| [**Qwen 3.6 plus**][22]          | go        | 123,123 (50% usage) | ✅        | $0.51  | 30 mins              | It auto merged the PR, didn't prompt for it to be merged. |
-| [**Qwen 3.6 plus**][23]          | csharp    | 225,871 (23% usage) | ✅        | $3.78  | 55 mins              | It auto merged the PR, didn't prompt for it to be merged. |
+| [**Claude 4.6 Sonnet**][6]       | csharp    | 126.5k (12k Haiku)  | ✅        | $5.97  | 32m 38s              |  |
+| [**Claude 4.8 Opus**][7]         | csharp    | 141.1k (15.8k Haiku)| ✅        | $10.00 | 26 min 42 secs       |  |
+| [**Claude 4.8 Opus high**][8]    | csharp    | 393k (20k Haiku )   | ✅        | $20.05 | 1 hour 56 mins       |  |
+| [**DeepSeek V4 Flash**][9]       | go        | 118,806 (12% used)  | ✅        | $0.08  | 17 mins 3 secs       | Created the PR, it auto-merged the PR, installed via Scoop and unencrypted successfully. |
+| [**DeepSeek V4 Flash**][10]      | csharp    | 235,746 (24% used)  | ✅        | $0.86  | ~45 mins             |  |
+| [**DeepSeek V4 Flash**][11]      | python    | 102,594 (10% used)  | ✅        | $0.05  | ~19 mins             | Had to ask it to verify it had installed via pip before completing. |
+| [**Gemini 3.5 Flash**][12]       | go        | 324,349 (31% used)  | ✅        | $6.82  | 40 mins 25 secs      |  |
+| [**GLM-5.2**][13]                | go        | 178,847 (18% used)  | ✅        | $4.71  | ~40 mins 31 secs     | Worked out how to merge automatically and that the app name was incorrect. |
+| [**GPT-5.1 Codex Mini**][14]     | go        | 76,671 (19% used)   | ✅        | $0.52  | Not provided         | Didn't merge changes; I merged and had to re-prompt. Prompt was missing this. |
+| [**GPT-5.1 Codex Mini**][15]     | csharp    | 154,561 (39% used)  | ❌        | $4.10  | ~1 hour              | Didn't finish: stopped before completion. Didn't create a .gitignore. Scanned non-repo directories.|
+| [**GPT-5.3 Codex**][16]          | csharp    | 153,000 (39%)       | ❌        | $3.57  | ~50 mins             | Didn't finish: had to prompt 3 times, then succeeded with Scoop. Scanned non-repo directories.|
+| [**Grok Build 0.1**][17]         | go        | 74,238 (29% used)   | ✅        | $1.16  | ~15 mins             |  |
+| [**Grok Build 0.1**][18]         | csharp    | 196,769 (77% used)  | ✅        | $5.14  | 47 mins 40 secs      |  |
+| [**Grok Build 0.1**][19]         | python    | 142,577 (56% used)  | ✅        | $1.94  | ~20 mins             |  |
+| [**Kimi 2.7 code**][20]          | go        | 132,799 (51% usage) | ✅        | $2.18  | ~42 mins             | Prompted for PR to be merged. Ran two code reviews without prompting. |
+| [**Kimi 2.7 code**][21]          | csharp    | 27,871 (11% usage)  | ✅        | $3.90  | ~1 hour              | Prompted for PR to be merged. Darwin build failed on GitHub; fixed upon prompting. Asked to create a tag. |
+| [**Kimi 2.7 code**][22]          | python    | 73,671 (28% usage)  | ✅        | $0.91  | ~40 mins             | Didn't need a PR but created one per instructions. Went slowly for a while. |
+| [**MiniMax M2.7**][23]           | go        | 118,479 (58% usage) | ❌        | $0.99  | 28 mins              | Failed - didn't infer the default rclone salt (I changed the prompt after this). It did prompt with 3 options for me to merge the PR |
+| [**Qwen 3.6 plus**][24]          | go        | 123,123 (50% usage) | ✅        | $0.51  | 30 mins              | It auto merged the PR, didn't prompt for it to be merged. |
+| [**Qwen 3.6 plus**][25]          | csharp    | 225,871 (23% usage) | ✅        | $3.78  | 55 mins              | It auto merged the PR, didn't prompt for it to be merged. |
 
 
 #### 2. Markdown - bullet points to table
@@ -74,23 +75,23 @@ Tests results are from June 2026 using OpenCode and Claude Code.
 [3]: https://github.com/llm-supermarket/cli-claude48-opus-go
 [4]: https://github.com/llm-supermarket/cli-claude45-haiku-high-csharp
 [5]: https://github.com/llm-supermarket/cli-claude45-sonnet-high-csharp
-[6]: https://github.com/llm-supermarket/cli-claude45-opushigh-csharp
-[7]: https://github.com/llm-supermarket/cli-deepseekv4-flash-go
-[8]: https://github.com/llm-supermarket/cli-deepseekv4-flash-csharp
-[9]: https://github.com/llm-supermarket/cli-deepseekv4-flash-python
-[10]: https://github.com/llm-supermarket/cli-gemini-go
-[11]: https://github.com/llm-supermarket/cli-glm-go
-[12]: https://github.com/llm-supermarket/cli-chatgpt-go
-[13]: https://github.com/llm-supermarket/cli-chatgpt-csharp
-[14]: https://github.com/llm-supermarket/cli-chatgpt-csharp
-[15]: https://github.com/llm-supermarket/cli-grok-go
-[16]: https://github.com/llm-supermarket/cli-grok-csharp
-[17]: https://github.com/llm-supermarket/cli-grok-python
-[18]: https://github.com/llm-supermarket/cli-kimi-go
-[19]: https://github.com/llm-supermarket/cli-kimi-csharp
-[20]: https://github.com/llm-supermarket/cli-kimi-python
-[21]: https://github.com/llm-supermarket/cli-minimaxm27-go
-[22]: https://github.com/llm-supermarket/cli-qwen36plus-go
-[23]: https://github.com/llm-supermarket/cli-qwen36plus-csharp
-
-[66]: https://github.com/llm-supermarket/cli-claude46-sonnet-medium-csharp/
+[6]: https://github.com/llm-supermarket/cli-claude46-sonnet-medium-csharp/
+[7]: https://github.com/llm-supermarket/cli-claude48-opusmedium-csharp
+[8]: https://github.com/llm-supermarket/cli-claude45-opushigh-csharp
+[9]: https://github.com/llm-supermarket/cli-deepseekv4-flash-go
+[10]: https://github.com/llm-supermarket/cli-deepseekv4-flash-csharp
+[11]: https://github.com/llm-supermarket/cli-deepseekv4-flash-python
+[12]: https://github.com/llm-supermarket/cli-gemini-go
+[13]: https://github.com/llm-supermarket/cli-glm-go
+[14]: https://github.com/llm-supermarket/cli-chatgpt-go
+[15]: https://github.com/llm-supermarket/cli-chatgpt-csharp
+[16]: https://github.com/llm-supermarket/cli-chatgpt-csharp
+[17]: https://github.com/llm-supermarket/cli-grok-go
+[18]: https://github.com/llm-supermarket/cli-grok-csharp
+[19]: https://github.com/llm-supermarket/cli-grok-python
+[20]: https://github.com/llm-supermarket/cli-kimi-go
+[21]: https://github.com/llm-supermarket/cli-kimi-csharp
+[22]: https://github.com/llm-supermarket/cli-kimi-python
+[23]: https://github.com/llm-supermarket/cli-minimaxm27-go
+[24]: https://github.com/llm-supermarket/cli-qwen36plus-go
+[25]: https://github.com/llm-supermarket/cli-qwen36plus-csharp
