@@ -7,10 +7,6 @@ This is a set of basic coding tests used to compare LLM coding models and find o
 1. A model can complete the task.
 2. How the model costs to complete the task.
 
-The task are not overly complicated and already have examples on GitHub that models can borrow from (this is removed in the 'hard' mode tests). 
-The task is intended to be something models can complete, but at the same time isn't a basic kata. The intention is to see how far a model can autonomously 
-complete the task, and how much it costs.
-
 If models and the tooling gradually improve the price should drop, number of tokens used should drop, and completeness should improve.
 
 ## Coding tests
@@ -18,9 +14,13 @@ If models and the tooling gradually improve the price should drop, number of tok
 There's currently 4 tests:
 
 1. Create a CLI tool that encrypts/decrypts files using the rclone crypt format (which hardcodes its salt). Create a PR, test decrypting two files.
-2. Markdown - turn bullets points into a table.
-3. Markdown - create links in a markdown file from repositories in a GitHub organisation.
-4. Markdown - convert links in a markdown table into inline format.
+2. Markdown - turn bullets points into a Markdown table.
+3. Markdown - create links in a Markdown table, using repositories in a GitHub organisation.
+4. Markdown - convert links in a Markdown table into inline format.
+
+The idea is not to have SWE style tests, or "create a Rust compiler", but a few boring everyday coding tests to compare costs/tokens. The CLI test 
+was designed so that there's a relatively hard to find answer for how to decrypt the example files, which the model has to discover itself (e.g 
+the rclone default salt value).
 
 ### Results
 
@@ -33,7 +33,7 @@ Tests results are from June 2026 using OpenCode and Claude Code.
 |----------------------------------|-----------|---------------------|-----------|---------|--------------------- |------------------------------------------------------------------------------------------------------------|
 | [**Claude 4.5 Haiku high**][1]   | go        | 71.9k               | ❌        | $6.19  | ~18 mins             | No auto mode;Didn't create the PR: "You're right - I apologize! I committed directly to main instead of..." (cost 10c to correct, linked wrong PR url after that); "5 commits with complete implementation, security hardening, and production-ready code.": 2 tests failed in the PR;merge conflict then it pushed to main randomnly; |
 | [**Claude 4.6 Sonnet**][2]       | go        | 146.4k              | ✅        | $3.49  | 34 mins 16 secs      | Failed to decrypt files; asked about rclone custom salt. Passed after nudge to look at example repo.  |
-| [**Claude 4.8 Opus**][3]         | go        | 107.1k              | ✅       | $6.20  | 17 mins 43 secs      | Followed all instructions exactly. Produced a neat table of decrypted filename and its contents when finishing. |
+| [**Claude 4.8 Opus**][3]         | go        | 107.1k              | ✅        | $6.20  | 17 mins 43 secs      | Followed all instructions exactly. Produced a neat table of decrypted filename and its contents when finishing. |
 | [**Claude 4.5 Haiku high**][4]   | csharp    | 82.3k (95%)         | ❌        | $6.19  | 27 mins 40 secs      | Didn't create a PR, had to be prompted: "You're absolutely right. Let me create a proper PR workflow. I'll reset main, create a feature branch, redo the work, and create a proper PR.";Merge issues with the PR it created;PR fixed, merged, then it discovered it had used the wrong algorithm.;It failed with the test files, but confidently. declared "The CLI works perfectly with its own format, as proven by the successful test." |
 | [**Claude 4.6 Sonnet high**][5]  | csharp    | 189k (33k Haiku)    | ✅        | $6.63  | 38m 40s              |  |
 | [**Claude 4.6 Sonnet**][66]      | csharp    | 126.5k (12k Haiku)  | ✅        | $5.97  | 32m 38s              |  |
